@@ -2,28 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Books</title>
+    <title>All Chapters</title>
 </head>
 <body>
-    <h1>Books</h1>
+    <h1>All Chapters</h1>
+
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
 
     <table>
         <thead>
             <tr>
-                <td>Name</td>
                 <td>Chapters</td>
             </tr>
         </thead>
         <tbody>
-            {% for book in books: %}
+            {% for chapter in chapters%}
                 <tr>
-                    <td>{{book['name']}}</td>
-                    <td><a href="{{url_for('book_chapters', id=book['_id'])}}">Go To Book</a></td>
+                    <td>{{ chapter['chapterName'] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
 
     </table>
-    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
 </body>
 </html>

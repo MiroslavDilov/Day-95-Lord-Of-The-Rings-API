@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+    <h1>Movies</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Movie</td>
+                <td>Link</td>
+                <td>Quotes</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+                <tr>
+                    <td>{{ movie['name']}}</td>
+                    <td><a href="{{ url_for('movie_info', id=movie['_id']) }}">Get Movie Info</a></td>
+                    <td><a href="{{ url_for('movie_quotes', id=movie['_id']) }}">Get Quotes</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+
+</body>
+</html>

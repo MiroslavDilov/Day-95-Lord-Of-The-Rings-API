@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Quotes</title>
+</head>
+<body>
+    <h1>Movie Quotes</h1>
+
+    <a href="{{ url_for('movies') }}">Go Back to Movies</a> <br>
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+    <table>
+        <thead>
+            <tr>
+                <td>Quote</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for quote in quotes: %}
+                <tr>
+                    <td>{{ quote['dialog'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

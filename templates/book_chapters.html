@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Book Chapters</title>
 </head>
 <body>
     <h1>Chapters</h1>
 
 
-    <a href="{{ url_for('books') }}">Go Back to Books</a> <br>
-    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
 
     <table>
         <thead>
             <tr>
-                <td>Chapter</td>
-                <td>Link</td>
+                <td>Chapters</td>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +24,8 @@
         </tbody>
 
     </table>
+    <a href="{{ url_for('books') }}">Go Back to Books</a> <br>
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
 
 
 </body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Info</title>
+</head>
+<body>
+    <h1>Movie Info</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Runtime (minutes)</td>
+                <td>Budget (in millions)</td>
+                <td>Box Office Revenue (in millions)</td>
+                <td>Academy Award Nominations</td>
+                <td>Academy Award Wins</td>
+                <td>Rotten Tomato Score</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ movie[0]['name']}}</td>
+                <td>{{ movie[0]['runtimeInMinutes']}}</td>
+                <td>{{ movie[0]['budgetInMillions']}}</td>
+                <td>{{ movie[0]['boxOfficeRevenueInMillions']}}</td>
+                <td>{{ movie[0]['academyAwardNominations']}}</td>
+                <td>{{ movie[0]['academyAwardWins']}}</td>
+                <td>{{ movie[0]['rottenTomatoesScore']}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('movies') }}">Go Back to Movies</a> <br>
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+
+</body>
+</html>

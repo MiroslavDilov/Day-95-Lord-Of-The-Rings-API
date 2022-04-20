@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Characters</title>
+</head>
+<body>
+    <h1>Characters</h1>
+
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+    <table>
+        <thead>
+            <tr>
+                <td>Height</td>
+                <td>Race</td>
+                <td>Gender</td>
+                <td>Birth</td>
+                <td>Spouse</td>
+                <td>Death</td>
+                <td>Realm</td>
+                <td>Hair</td>
+                <td>Name</td>
+                <td>wikiUrl</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for character in characters: %}
+                <tr>
+                    <td>{{character['height']}}</td>
+                    <td>{{character['race']}}</td>
+                    <td>{{character['gender']}}</td>
+                    <td>{{character['birth']}}</td>
+                    <td>{{character['spouse']}}</td>
+                    <td>{{character['death']}}</td>
+                    <td>{{character['realm']}}</td>
+                    <td>{{character['hair']}}</td>
+                    <td>{{character['name']}}</td>
+                    <td><a href="{{ character['wikiUrl'] }}">wiki URL</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
