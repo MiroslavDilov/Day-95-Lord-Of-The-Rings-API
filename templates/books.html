@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Books</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Chapters</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books: %}
+                <tr>
+                    <td>{{book['name']}}</td>
+                    <td><a href="{{url_for('book_chapters', id=book['_id'])}}">Go To Book</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+</body>
+</html>

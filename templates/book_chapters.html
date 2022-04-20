@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Chapters</h1>
+
+
+    <a href="{{ url_for('books') }}">Go Back to Books</a> <br>
+    <a href="{{ url_for('hello_world') }}">Go Back to Start</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Chapter</td>
+                <td>Link</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for chapter in chapters%}
+                <tr>
+                    <td>{{ chapter['chapterName'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+
+</body>
+</html>
